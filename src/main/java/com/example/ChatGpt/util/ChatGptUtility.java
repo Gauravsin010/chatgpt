@@ -20,7 +20,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 
-import java.io.IOException;
 
 @Component
 public class ChatGptUtility {
