@@ -1,0 +1,5 @@
+# Created at 2023-11-23T11:02:36.217
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Documents\java\ChatGpt\ChatGpt\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
