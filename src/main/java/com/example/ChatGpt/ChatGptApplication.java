@@ -13,7 +13,8 @@ public class ChatGptApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Hello application started");
+		System.out.println();
+		System.out.println("Hello application started....");
 	}
 
 }
