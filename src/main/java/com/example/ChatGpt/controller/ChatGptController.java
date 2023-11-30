@@ -48,16 +48,18 @@ public class ChatGptController {
         }
     }
 
-//    @PostMapping("/addDataInDb")
-//    public String addData(){
-//        try {
-//            logger.info("Inside addData method");
-//            chatsRepo.addChats("I hope you're fine", "I'm fine, thanks for asking");
-//            logger.info("Data saved");
-//            return "OK";
-//        } catch (Exception ex){
-//            logger.info("Exception inside addData method");
-//            throw new CustomException("Exception inside addData method", ex);
-//        }
-//    }
+    @PostMapping("/create/image")
+    public String createImage(@RequestHeader String text){
+        try {
+            logger.info("Inside createImage method");
+            logger.info("Text received " + text);
+            String response = chatGptService.createImage(text);
+            return response;
+
+        } catch (Exception ex){
+            logger.info("Exception inside createImage method");
+            throw new CustomException("Exception inside createImage method", ex);
+        }
+    }
+
 }
