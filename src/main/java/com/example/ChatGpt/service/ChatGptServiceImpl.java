@@ -35,43 +35,6 @@ public class ChatGptServiceImpl implements ChatGptService{
 
     public static final Logger logger = LoggerFactory.getLogger(ChatGptServiceImpl.class);
 
-    //curl https://api.openai.com/v1/chat/completions \
-//            -H "Content-Type: application/json" \
-//            -H "Authorization: Bearer $OPENAI_API_KEY" \
-//            -d '{
-//            "model": "gpt-3.5-turbo",
-//            "messages": [
-//    {
-//        "role": "system",
-//            "content": "You are a helpful assistant."
-//    },
-//    {
-//        "role": "user",
-//            "content": "Hello!"
-//    }
-//    ]
-//}'
-    //    {
-//      *  "id": "chatcmpl-123",
-//      *      "object": "chat.completion",
-//      *      "created": 1677652288,
-//       *     "model": "gpt-3.5-turbo-0613",
-//       *     "system_fingerprint": "fp_44709d6fcb",
-//       *     "choices": [{
-//        "index": 0,
-//                "message": {
-//            "role": "assistant",
-//                    "content": "\n\nHello there, how may I assist you today?",
-//        },
-//        "finish_reason": "stop"
-//    }],
-//        "usage": {
-//        "prompt_tokens": 9,
-//                "completion_tokens": 12,
-//                "total_tokens": 21
-//    }
-//    }
-
     @Override
     public String chatGptSearch(String text) {
         try {
@@ -109,19 +72,6 @@ public class ChatGptServiceImpl implements ChatGptService{
             throw new CustomException("Exception inside chatGptSearch method", ex);
         }
     }
-
-
-
-    //    url https://api.openai.com/v1/images/generations \
-//            -H "Content-Type: application/json" \
-//            -H "Authorization: Bearer $OPENAI_API_KEY" \
-//            -d '{
-//            "model": "dall-e-3",
-//            "prompt": "A cute baby sea otter",
-//            "n": 1,
-//            "size": "1024x1024"
-//}'
-
 
     @Override
     public String createImage(String text) {
